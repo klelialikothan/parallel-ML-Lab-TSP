@@ -15,6 +15,7 @@ add_executable(parallel-ML-Lab-tsp ${SOURCE_FILES})
 # Add linker flag for math library
 #target_link_libraries(parallel-ML-Lab-tsp m)
 
+# Add linker flags for math library and OpenMP
 find_package(OpenMP)
 if(OpenMP_CXX_FOUND)
     target_link_libraries(parallel-ML-Lab-tsp PUBLIC m PUBLIC OpenMP::OpenMP_CXX)
